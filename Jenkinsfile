@@ -6,7 +6,9 @@ node {
     }
     stage('Clone sources') {
         git url: 'https://github.com/jfrogdev/project-examples.git'
-        sh 'ls'
+        sh "printf 'The folder content is:\n'"
+        sh "ls"
+        sh 'echo "Can you see something?"'
     }
     stage ('Beginning') {
         print "The current environment is: ${env.NODE_ENV}"
