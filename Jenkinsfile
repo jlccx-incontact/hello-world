@@ -1,5 +1,8 @@
 node {
-    agent { docker: 'node:6.3' }
+    ansiColor('xterm') {
+        // Just some echoes to show the ANSI color.
+        stage "\u001B[31mI'm Red\u001B[0m Now not"
+    }
     stage ('Beginning') {
         print "The current environment is: ${env.NODE_ENV}"
         //sh "echo 'There is no content, the folder is empty.'"
