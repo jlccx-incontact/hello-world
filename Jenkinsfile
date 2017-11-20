@@ -5,7 +5,7 @@ node {
     stage ('Create build output'){
         sh "mkdir -p output"
     }
-    stage "Archive build output"
-    
-    sh "ls "
+    stage("Archive build output"){    
+        sh "ls | date"
+    }
 }
